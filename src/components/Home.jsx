@@ -1,9 +1,16 @@
 import React from 'react'
+import Section1 from './home/section_1.jsx';
+import Section2 from './home/section_2.jsx';
+import Section3 from './home/section_3.jsx';
+import Section4 from './home/section_4.jsx';
 
 const Home = () => {
   return (
    <>
-    <div>this is a home page</div>
+    <Section1 />
+    <Section3 />
+    <Section4 />
+    <Section2 />
    </>
     
   )
