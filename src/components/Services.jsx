@@ -1,9 +1,13 @@
 import React from 'react'
+import Section1 from './services/section_1.jsx';
 
-const Services = () => {
+const Home = () => {
   return (
-    <div>Services</div>
+   <>
+    <Section1 />
+   </>
+    
   )
 }
 
-export default Services
+export default Home
