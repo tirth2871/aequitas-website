@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const services = [
   {
-    title: "Banks & Financial Institutions",
+    title: "AML/CFT Compliance",
     description: "AML programs, transaction monitoring, and MLRO support for banks.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -12,7 +12,7 @@ const services = [
     ),
   },
   {
-    title: "Financial Companies",
+    title: "Regulatory Advisory",
     description: "Regulatory compliance frameworks for payment firms and fintechs.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -21,7 +21,7 @@ const services = [
     ),
   },
   {
-    title: "Insurance Providers",
+    title: "Risk Assessment",
     description: "AML/CFT solutions tailored to insurance sector obligations.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -30,7 +30,7 @@ const services = [
     ),
   },
   {
-    title: "Auditors & Accountants",
+    title: "Compliance Training",
     description: "Compliance guidance for accounting and audit professionals.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -39,7 +39,7 @@ const services = [
     ),
   },
   {
-    title: "Real Estate & Brokers",
+    title: "KYC/CDD Advisory",
     description: "DNFBP compliance and risk management for the property sector.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -48,7 +48,7 @@ const services = [
     ),
   },
   {
-    title: "Dealers in Precious Metals",
+    title: "Policy Development",
     description: "AML frameworks for jewellery, gold, and gemstone traders.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -57,7 +57,7 @@ const services = [
     ),
   },
   {
-    title: "Trust Service Providers",
+    title: "Compliance Audits",
     description: "Corporate governance and AML solutions for trust companies.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -66,7 +66,7 @@ const services = [
     ),
   },
   {
-    title: "Legal Professionals",
+    title: "MLRO Services",
     description: "Regulatory compliance support for law firms and practitioners.",
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -115,7 +115,7 @@ const Section4 = () => {
           >
             <div className="h-1.5 w-1.5 rounded-full bg-gold-400" />
             <span className="text-xs font-semibold tracking-widest text-gold-400 uppercase">
-              Who We Serve
+              What We Offer
             </span>
           </motion.div>
 
@@ -126,7 +126,7 @@ const Section4 = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            Industries We{" "}
+            Our{" "}
             <span
               style={{
                 background: "linear-gradient(135deg, #f5d88a, #c9a84c)",
@@ -135,7 +135,7 @@ const Section4 = () => {
                 backgroundClip: "text",
               }}
             >
-              Serve
+              Services
             </span>
           </motion.h2>
 
@@ -146,8 +146,8 @@ const Section4 = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            We provide comprehensive AML/CFT compliance and consulting solutions
-            across a wide range of regulated sectors in the UAE and beyond.
+            Comprehensive compliance and regulatory solutions designed to
+            protect your business and ensure adherence to UAE and international standards.
           </motion.p>
         </div>
 
