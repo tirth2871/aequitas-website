@@ -58,7 +58,7 @@ const Section1 = () => {
             <svg className="h-3 w-3 fill-gold-400" viewBox="0 0 12 12">
               <circle cx="6" cy="6" r="6" />
             </svg>
-            DFSA Approved MLRO Services
+            DFSA Approved - CAMS Certified
           </span>
         </motion.div>
 
@@ -69,7 +69,7 @@ const Section1 = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="max-w-3xl text-5xl font-bold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl"
         >
-          Your Trusted Partner in{" "}
+          Navigating Compliance{" "}
           <span
             style={{
               background: "linear-gradient(90deg, #c9a84c, #f5d88a, #c9a84c)",
@@ -78,7 +78,7 @@ const Section1 = () => {
               backgroundClip: "text",
             }}
           >
-            AML/CFT Compliance
+            With Confidence
           </span>
         </motion.h1>
 
@@ -89,8 +89,8 @@ const Section1 = () => {
           transition={{ duration: 0.8, delay: 0.35 }}
           className="mt-6 max-w-2xl text-lg font-light leading-8 text-gray-400 sm:text-xl"
         >
-          Premier compliance consultancy in Dubai, UAE — delivering expert MLRO services,
-          regulatory advisory, AML/CFT frameworks, and risk management tailored to your industry.
+          Aequitas Management Consultancies delivers expert regulatory compliance, AML/CFT advisory, and Risk
+          management solutions from the heart of Dubai.
         </motion.p>
 
         {/* CTA buttons */}
@@ -104,7 +104,7 @@ const Section1 = () => {
             to="/contact"
             className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-7 py-3.5 text-sm font-semibold text-gray-950 shadow-lg shadow-gold-500/20 hover:bg-gold-400 transition-all duration-300"
           >
-            Get Started
+            Schedule Consultation
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
