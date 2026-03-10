@@ -18,8 +18,15 @@
 
 // export default App
 
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
+// Scrolls to top on every route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => { window.scrollTo({ top: 0, behavior: 'instant' }); }, [pathname]);
+  return null;
+};
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
@@ -29,16 +36,17 @@ import Services from "./components/Services";
 import Contact from "./components/Contact";
 
 // Import individual service pages
-import AmlCftCompliance from "./components/services/section_2/section_2_1x1";
-import RegulatoryAdvisory from "./components/services/section_2/section_2_1x2";
-import RiskAssessment from "./components/services/section_2/section_2_1x3";
-import ComplianceTraining from "./components/services/section_2/section_2_2x1";
-import KycCddAdvisory from "./components/services/section_2/section_2_2x2";
+import MLROServices from "./components/services/section_2/section_2_1x1";
+import ComplianceAdvisory from "./components/services/section_2/section_2_1x2";
+import InternalAuditing from "./components/services/section_2/section_2_1x3";
+import ExternalAuditing from "./components/services/section_2/section_2_2x1";
+import Training from "./components/services/section_2/section_2_2x2";
 import PolicyDevelopment from "./components/services/section_2/section_2_2x3";
 
 const App = () => {
   return (
     <Router>
+      <ScrollToTop />
       <div className="flex-grow pt-16">
         {/* Navbar always visible */}
         <Header />
@@ -48,12 +56,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
-            <Route path="/services/aml-cft-compliance" element={<AmlCftCompliance />} />
-            <Route path="/services/regulatory-advisory" element={<RegulatoryAdvisory />} />
-            <Route path="/services/risk-assessment" element={<RiskAssessment />} />
-            <Route path="/services/compliance-training" element={<ComplianceTraining />} />
-            <Route path="/services/kyc-cdd-advisory" element={<KycCddAdvisory />} />
-            <Route path="/services/policy-development" element={<PolicyDevelopment />} />
+            <Route path="/services/section_2_1x1" element={<MLROServices />} />
+            <Route path="/services/section_2_1x2" element={<ComplianceAdvisory />} />
+            <Route path="/services/section_2_1x3" element={<InternalAuditing />} />
+            <Route path="/services/section_2_2x1" element={<ExternalAuditing />} />
+            <Route path="/services/section_2_2x2" element={<Training />} />
+            <Route path="/services/section_2_2x3" element={<PolicyDevelopment />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

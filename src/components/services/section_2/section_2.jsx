@@ -73,7 +73,7 @@ const services = [
 
 const Section2 = () => {
     return (
-        <section className="relative bg-gray-900 overflow-hidden py-24 px-6 lg:px-16">
+        <section className="relative bg-gray-900 overflow-hidden py-14 px-6 lg:px-16">
 
             {/* Decorative top divider */}
             <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
@@ -92,18 +92,7 @@ const Section2 = () => {
 
                 {/* Section header */}
                 <div className="text-center mb-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: false, amount: 0.3 }}
-                        className="inline-flex items-center gap-2 mb-4 rounded-full border border-gold-500/30 bg-gold-500/8 px-4 py-1.5"
-                    >
-                        <div className="h-1.5 w-1.5 rounded-full bg-gold-400" />
-                        <span className="text-xs font-semibold tracking-widest text-gold-400 uppercase">
-                            What We Offer
-                        </span>
-                    </motion.div>
+
 
                     <motion.h2
                         className="text-4xl font-bold text-white mb-4"

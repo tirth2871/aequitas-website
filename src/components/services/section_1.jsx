@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const ServicesHero = () => {
   return (
-    <section className="relative overflow-hidden bg-gray-950 pt-36 pb-20 px-6 lg:px-8">
+    <section className="relative overflow-hidden bg-gray-950 pt-24 pb-10 px-6 lg:px-8">
 
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-grid-pattern opacity-25 pointer-events-none" />
@@ -75,19 +75,7 @@ const ServicesHero = () => {
           From outsourced compliance officers to independent auditing and training, we deliver comprehensive solutions tailored to UAE and GCC regulatory requirements.
         </motion.p>
 
-        {/* Decorative bottom line */}
-        <motion.div
-          initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 0.7, delay: 0.55 }}
-          className="mt-12 flex items-center justify-center gap-4"
-        >
-          <div className="h-px flex-1 max-w-[120px] bg-gradient-to-l from-gold-500/40 to-transparent" />
-          <svg className="h-3 w-3 text-gold-500 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L9.5 9.5H2l6.2 4.5-2.4 7.5L12 17l6.2 4.5-2.4-7.5L22 9.5h-7.5z" />
-          </svg>
-          <div className="h-px flex-1 max-w-[120px] bg-gradient-to-r from-gold-500/40 to-transparent" />
-        </motion.div>
+
       </div>
     </section>
   );
