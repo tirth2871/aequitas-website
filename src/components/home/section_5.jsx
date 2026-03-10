@@ -1,3 +1,5 @@
+// meet our founder section
+
 import React from "react";
 import { motion } from "framer-motion";
 import founderPhoto from "../../assets/pexels-thirdman-7652039.jpg";
@@ -39,7 +41,7 @@ const Section5 = () => {
         className="absolute inset-0 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse 60% 50% at 50% 0%, rgba(26,54,101,0.35) 0%, transparent 100%)",
+            "radial-gradient(ellipse 100% 100% at 50% 50%, rgba(26,54,101,0.35) 0%, transparent 75%)",
         }}
       />
 
