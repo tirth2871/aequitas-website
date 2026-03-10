@@ -10,7 +10,7 @@
 //     <>
 //     <Header />
 //     <Home/>
-    
+
 //     <Footer />  
 //     </>
 //   )
@@ -20,13 +20,21 @@
 
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";   // your navbar component
-import Footer from "./components/Footer";   // your footer component
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // Import your pages
 import Home from "./components/Home";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
+
+// Import individual service pages
+import AmlCftCompliance from "./components/services/section_2/section_2_1x1";
+import RegulatoryAdvisory from "./components/services/section_2/section_2_1x2";
+import RiskAssessment from "./components/services/section_2/section_2_1x3";
+import ComplianceTraining from "./components/services/section_2/section_2_2x1";
+import KycCddAdvisory from "./components/services/section_2/section_2_2x2";
+import PolicyDevelopment from "./components/services/section_2/section_2_2x3";
 
 const App = () => {
   return (
@@ -40,6 +48,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/aml-cft-compliance" element={<AmlCftCompliance />} />
+            <Route path="/services/regulatory-advisory" element={<RegulatoryAdvisory />} />
+            <Route path="/services/risk-assessment" element={<RiskAssessment />} />
+            <Route path="/services/compliance-training" element={<ComplianceTraining />} />
+            <Route path="/services/kyc-cdd-advisory" element={<KycCddAdvisory />} />
+            <Route path="/services/policy-development" element={<PolicyDevelopment />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
