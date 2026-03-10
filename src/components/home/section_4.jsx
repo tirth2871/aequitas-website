@@ -1,3 +1,5 @@
+// our services section of home page
+
 import React from "react";
 import { motion } from "framer-motion";
 
@@ -56,33 +58,34 @@ const services = [
       </svg>
     ),
   },
-  {
-    title: "Compliance Audits",
-    description: "Corporate governance and AML solutions for trust companies.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-  },
-  {
-    title: "MLRO Services",
-    description: "Regulatory compliance support for law firms and practitioners.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 6h18M3 10h18M3 14h12m-6 4h6M5 6V4a1 1 0 011-1h12a1 1 0 011 1v2" />
-      </svg>
-    ),
-  },
-  {
-    title: "Virtual Asset Providers",
-    description: "VASP licensing, travel rule, and crypto AML compliance.",
-    icon: (
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-      </svg>
-    ),
-  },
+  // — Future services (uncomment to re-enable) —
+  // {
+  //   title: "Compliance Audits",
+  //   description: "Corporate governance and AML solutions for trust companies.",
+  //   icon: (
+  //     <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+  //       <path strokeLinecap="round" strokeLinejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   title: "MLRO Services",
+  //   description: "Regulatory compliance support for law firms and practitioners.",
+  //   icon: (
+  //     <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+  //       <path strokeLinecap="round" strokeLinejoin="round" d="M3 6h18M3 10h18M3 14h12m-6 4h6M5 6V4a1 1 0 011-1h12a1 1 0 011 1v2" />
+  //     </svg>
+  //   ),
+  // },
+  // {
+  //   title: "Virtual Asset Providers",
+  //   description: "VASP licensing, travel rule, and crypto AML compliance.",
+  //   icon: (
+  //     <svg xmlns="http://www.w3.org/2000/svg" className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+  //       <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+  //     </svg>
+  //   ),
+  // },
 ];
 
 const Section4 = () => {
