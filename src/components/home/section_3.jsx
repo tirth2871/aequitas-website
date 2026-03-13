@@ -1,3 +1,5 @@
+// about equitas section of page
+
 import React from "react";
 import { motion } from "framer-motion";
 import teamLogo from "../../assets/pexels-thirdman-7652039.jpg";

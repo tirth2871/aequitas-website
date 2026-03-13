@@ -4,14 +4,12 @@ import { Link } from "react-router-dom";
 import companyLogo from "../assets/company_logo.png";
 
 const services = [
-  "MLRO Services",
-  "AML/CFT Programs",
-  "Regulatory Advisory",
-  "Risk Management",
-  "KYC/CDD Frameworks",
-  "VASP Compliance",
-  "DNFBP Consulting",
-  "Staff AML Training",
+  { label: "MLRO Services", href: "/services/section_2_1x1" },
+  { label: "Compliance Advisory", href: "/services/section_2_1x2" },
+  { label: "Internal Auditing", href: "/services/section_2_1x3" },
+  { label: "External Auditing", href: "/services/section_2_2x1" },
+  { label: "Training", href: "/services/section_2_2x2" },
+  { label: "Policy Development", href: "/services/section_2_2x3" },
 ];
 
 const socialLinks = [
@@ -46,7 +44,19 @@ const socialLinks = [
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-gray-400">
+    <footer
+      className="relative text-gray-400 overflow-hidden"
+      style={{
+        background:
+          "linear-gradient(180deg, #09101f 0%, #060810 60%, #030508 100%)",
+      }}
+    >
+      {/* Full-footer gold tint overlay */}
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 pointer-events-none"
+        style={{ background: "rgba(201,168,76,0.11)" }}
+      />
 
       {/* Main footer content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-16 py-16 grid grid-cols-1 md:grid-cols-[1.4fr_2fr_1.2fr] gap-12">
@@ -68,8 +78,8 @@ const Footer = () => {
           </Link>
 
           <p className="text-sm leading-relaxed text-gray-500 max-w-xs">
-            Premier AML/CFT compliance consultancy in Dubai, UAE. DFSA approved MLRO services,
-            regulatory advisory, and risk management for regulated entities.
+            Aequitas Management Consultancies LLC are a team of Dubai-based experts helping organizations
+            navigate complex regulatory landscapes across the UAE and Middle East.
           </p>
 
           {/* Social icons */}
@@ -87,26 +97,55 @@ const Footer = () => {
           </div>
         </motion.div>
 
-        {/* Middle: Services */}
+        {/* Middle: Company Nav + Services */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
           viewport={{ once: true }}
+          className="grid grid-cols-2 gap-8"
         >
-          <h3 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">
-            Our Services
-          </h3>
-          <div className="grid grid-cols-2 gap-x-8 gap-y-2.5">
-            {services.map((svc) => (
-              <a
-                key={svc}
-                href="/services"
-                className="text-sm text-gray-500 hover:text-gold-400 transition-colors duration-200"
-              >
-                {svc}
-              </a>
-            ))}
+          {/* Company links */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">
+              Company
+            </h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/" className="text-sm text-gray-500 hover:text-gold-400 transition-colors duration-200">
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-sm text-gray-500 hover:text-gold-400 transition-colors duration-200">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="text-sm text-gray-500 hover:text-gold-400 transition-colors duration-200">
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Services list */}
+          <div>
+            <h3 className="text-sm font-semibold text-white uppercase tracking-widest mb-5">
+              Our Services
+            </h3>
+            <ul className="space-y-3">
+              {services.map((svc) => (
+                <li key={svc.href}>
+                  <Link
+                    to={svc.href}
+                    className="text-sm text-gray-500 hover:text-gold-400 transition-colors duration-200"
+                  >
+                    {svc.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </motion.div>
 
@@ -125,7 +164,7 @@ const Footer = () => {
               <svg className="h-4 w-4 flex-shrink-0 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              info@aequitasuae.com
+              contact@aequitasuae.com
             </li>
             <li className="flex items-center gap-2 text-gray-500">
               <svg className="h-4 w-4 flex-shrink-0 text-gold-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>

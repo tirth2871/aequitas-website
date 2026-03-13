@@ -1,3 +1,5 @@
+// ready to build a compliant future section of home page
+
 import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
@@ -79,27 +81,13 @@ const Section2 = () => {
           frameworks, risk assessments, and peace of mind for businesses across Dubai, UAE and beyond.
         </motion.p>
 
-        {/* Divider ornament */}
-        <motion.div
-          initial={{ opacity: 0, scaleX: 0 }}
-          whileInView={{ opacity: 1, scaleX: 1 }}
-          transition={{ duration: 0.7, delay: 0.3 }}
-          viewport={{ once: false, amount: 0.4 }}
-          className="my-10 flex items-center justify-center gap-4"
-        >
-          <div className="h-px flex-1 max-w-[120px] bg-gradient-to-l from-gold-500/40 to-transparent" />
-          <svg className="h-4 w-4 text-gold-500" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M12 2L9.5 9.5H2l6.2 4.5-2.4 7.5L12 17l6.2 4.5-2.4-7.5L22 9.5h-7.5z" />
-          </svg>
-          <div className="h-px flex-1 max-w-[120px] bg-gradient-to-r from-gold-500/40 to-transparent" />
-        </motion.div>
-
         {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35 }}
           viewport={{ once: false, amount: 0.4 }}
+          className="mt-10"
         >
           <Link
             to="/contact"
