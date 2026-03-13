@@ -39,7 +39,7 @@ const contactInfo = [
             </svg>
         ),
         label: "Email",
-        value: "info@aequitasuae.com",
+        value: "contact@aequitasuae.com",
     },
     {
         icon: (
@@ -48,7 +48,7 @@ const contactInfo = [
             </svg>
         ),
         label: "Business Hours",
-        value: "Sunday – Thursday: 9:00 AM – 6:00 PM GST",
+        value: "Monday – Friday: 8:00 AM – 5:00 PM GST",
     },
 ];
 
@@ -112,6 +112,7 @@ function InputField({ id, label, type = "text", placeholder, value, onChange, re
 export default function Contact() {
     const [form, setForm] = useState(initialForm);
     const [submitted, setSubmitted] = useState(false);
+    const [isSubmitting, setIsSubmitting] = useState(false);
     const [errors, setErrors] = useState({});
 
     const handleChange = (field) => (e) =>
@@ -136,7 +137,37 @@ export default function Contact() {
         const errs = validate();
         setErrors(errs);
         if (Object.keys(errs).length === 0) {
-            setSubmitted(true);
+            setIsSubmitting(true);
+
+            // Format contact details for backend Email Service
+            const payload = {
+                firstName: form.firstName,
+                lastName: form.lastName,
+                company: form.company,
+                email: form.email,
+                mobile: `${form.countryCode} ${form.mobile}`,
+                description: form.description
+            };
+
+            fetch("http://localhost:5000/send-emails", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    setIsSubmitting(false);
+                    if (data.success) {
+                        setSubmitted(true);
+                    } else {
+                        alert(data.error || "Failed to send message. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    console.error("Error sending message:", error);
+                    setIsSubmitting(false);
+                    alert("An error occurred while sending your message. Please verify backend is running.");
+                });
         }
     };
 
@@ -482,18 +513,21 @@ export default function Contact() {
                                     {/* Submit */}
                                     <button
                                         type="submit"
-                                        className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gold-500 px-8 py-4 text-sm font-bold text-gray-950 shadow-lg shadow-gold-500/20 hover:bg-gold-400 hover:shadow-gold-400/30 transition-all duration-300 active:scale-[0.98]"
+                                        disabled={isSubmitting}
+                                        className="group mt-2 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gold-500 px-8 py-4 text-sm font-bold text-gray-950 shadow-lg shadow-gold-500/20 hover:bg-gold-400 hover:shadow-gold-400/30 transition-all duration-300 active:scale-[0.98] disabled:opacity-70 disabled:cursor-not-allowed"
                                     >
-                                        Send Message
-                                        <svg
-                                            className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
-                                            fill="none"
-                                            viewBox="0 0 24 24"
-                                            stroke="currentColor"
-                                            strokeWidth={2}
-                                        >
-                                            <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                        </svg>
+                                        {isSubmitting ? "Sending..." : "Send Message"}
+                                        {!isSubmitting && (
+                                            <svg
+                                                className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                                strokeWidth={2}
+                                            >
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                            </svg>
+                                        )}
                                     </button>
 
                                     <p className="text-center text-xs text-gray-600">
